@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{  /* corpo do site         */
+    background-color: #0e1013;
+}
+
+a { /*  MENU   */
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#header {
+    box-sizing:border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu{
+    display: flex;
+    list-style: none;
+    gap:.5rem
+}
+#menu a{
+    display: block;
+    padding: .5rem;
+}
+#btn-mobile{ /*FIM DO MENU*/
+    display: none;
+    color: white;
+}
+
+@media(max-width:600px) {/* MENU RESPONSIVO */
+    #menu {
+        display: block;
+       position:absolute;
+       width: 100%;
+       top: 70px;
+       right:0px;
+       background: #10141b;
+        transition: .6s;
+       z-index: 1000;
+       height: 0px;
+       visibility: hidden;
+       overflow-y: hidden;
+       
+    }
+    #nav.active #menu {
+        height:calc(100vh - 70px);
+       visibility: visible;
+    }
+
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid #b8bec9;
+    }
+    #btn-mobile {
+        display:flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    #hamburger{
+        border-top:2px solid ;
+        width: 20px;
+        color: white;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background:currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+
+    }
+    #nav.active #hamburger {
+        border-top-color:transparent ;
+    }
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+
+    }
+
+}  /* FIM DO MENU RESPONSIVO */
+
+
+
+h1{/* JAVASCRIPT ANIMAÇÃO INICIAL    */
+    text-align:center;
+    max-width: 720px;
+    margin: 20px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(255, 255, 255, 0.966);
+    font-size: 30PX;
+    text-shadow: 3px 3px 10px rgb(14 199 237 / 51%);
+}
+
+.apresentacao{   
+   
+    
+  background-image: url('https://i.pinimg.com/originals/b1/17/0e/b1170e74d9b4248eb188c155801d0973.jpg');
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height:680px;
+   
+}
+
+#logo{
+    margin-top: 18px;
+    font-family:'Times New Roman', Times, serif;
+}
+.texto-de-apresentacao {
+    display:inline-block;
+    margin-top: 60px;
+    color: #fcfcfc;
+    font-size: 30px;
+    margin-left: auto;
+    width: auto;
+    margin-left: 30px;
+    margin-right: auto;
+    text-align:center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 3px rgb(7, 97, 85);
+    
+
+}
+
+.apresentacao-inicial img{ 
+    border-radius: 10px;
+    border: 2px solid rgb(14, 13, 13);
+    float: left;
+}
+
+.apresentacao-inicial{
+    background-color: #0a0c0f;     
+ 
+
+}
+.apresentacao-inicial :hover{
+    color: #ffffff;
+    background-color: #1d4468;
+    box-shadow:1px 3px #246666;
+}
+
+.apresentacao-inicial p{
+    color: #fcfcfc;
+    display: inline-block;
+    width: 300px;
+    font-size: 26px;
+    letter-spacing: 4px;
+    text-align:center;
+ 
+}
+.apresentacao-inicial div{
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 120px;
+    margin-right: auto;
+    background-color: #181f2c;
+    border: 3px solid white;
+    border-radius:12px;
+    box-shadow:  2px 2px 4px rgb(14 199 237 / 51%);
+}
+
+.apresentacao-inicial H3{
+    font-size: 30px;
+    margin-top: 35px;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    color: #fcfcfc;
+    text-decoration-color: none;
+    text-shadow: 3px 3px 10px rgb(14 199 237 / 51%);
+    background-color: #193550;
+    box-shadow: 2px 1px white;
+}
+
+.nossos-cursos{
+    background-color: #0a0c0f; 
+    margin-top: 130px; 
+
+}
+.nossos-cursos p{
+    color: #fcfcfc;
+    display: inline-block;
+    width: 300px;
+    font-size: 25px;
+    letter-spacing: 4px;
+
+}
+
+
+.nossos-cursos div{
+    display: inline-block;
+    margin-left:1%;
+    margin-top: 100px;
+    margin-right: auto;
+    background-color: #0d172b;
+    border: 3px solid white;
+    border-radius:12px;
+    height: auto;
+    box-shadow:  2px 2px 4px rgb(14 199 237 / 51%);
+}
+
+.nossos-cursos img{ 
+    border-radius: 10px;
+    border: 2px solid rgb(14, 13, 13);
+    
+}
+.nossos-cursos h3{
+    font-size: 30px;
+    margin-top: 35px;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    color: #fcfcfc;
+    text-decoration-color: none;
+    text-shadow: 3px 3px 10px rgb(14 199 237 / 51%);
+    background-color: #193550;
+    box-shadow: 2px 1px white;
+  
+}
+
+
+.nossos-cursos span{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+    color: #0fcece;
+    border: 2px solid white;
+    border-radius: 30px;
+    display:grid;
+    text-align: center;
+    background-color: #131d2e;
+    font-size: 26px;
+    font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.nossos-cursos :hover{
+    color: #ffffff;
+    background-color: #1d4468;
+    box-shadow:1px 3px #246666;
+}
+
+
+video{
+  max-width: 100%;
+  border-radius: 20px;
+  float: right;
+  margin-top: 31px;
+  box-shadow:3px 3px 3px #405a86;
+
+}
+
+.rede-social{  /* redes sociais do site */
+    float: right;
+    margin-top: 20px;
+    display: flexbox;
+    background-color:#12171d;
+}
+.faleconosco p{/* fale conosco */
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.faleconosco a{
+    text-decoration: none;
+    
+}
+.faleconosco{/* fim do fale conosco */
+    margin-top: 100px;
+    width: 140px;
+}
+[data-anime]{  /*  ANIMAÇÃO DO SCROOL   */
+    opacity: 0;
+    transition: .3s;
+   
+}
+[data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+
+
+[data-anime].animate{
+    opacity: 1;
+    transform :translate3d(0px, 0px, 0px) ;  /* FIM DA ANIMAÇÃO DO SCROLL     */
+}
+footer{
+    background-color: #12171d;
+    height: 90px;
+    border-radius: 30px;
+
+}
+footer p{
+    margin-top: 5px;
+}
